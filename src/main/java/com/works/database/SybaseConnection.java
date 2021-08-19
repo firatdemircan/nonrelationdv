@@ -63,6 +63,12 @@ public class SybaseConnection {
             });
         return  result;
     }
-    //public <T extends BaseModel> T maptoLmapist(List<Object[]> data, Class<T> t)  {
+    public <T extends BaseModel> T maptoSingle(Object data, Class<T> t) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+
+        T t1 = t.getDeclaredConstructor().newInstance();
+
+        return t1;
+
+    }
 
 }
